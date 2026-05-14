@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bay Dental Associates &middot; Before vs After &middot; AG1 Consulting</title>
+<meta name="description" content="Bay Dental Associates is a 34-year independent, partner-owned Green Bay family practice with a team measured in decades. AI search cannot see any of it, and the practice is lost next to the much larger Dental Associates group. Audit, scorecard, and 90-day plan inside.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --navy: #2a4a63;
+  --navy-deep: #1c3243;
+  --blue: #4a7ba6;
+  --blue-soft: #8fb3cf;
+  --sky: #dce9f1;
+  --cream: #f7f3ec;
+  --bone: #ece4d5;
+  --sand: #c7a981;
+  --sand-deep: #a98a60;
+  --burgundy: #7a2c2c;
+  --ink: #232a31;
+  --ink-soft: #4f5862;
+  --line: #d8cfbd;
+  --green: #3f7a4a;
+  --white: #ffffff;
+  --display: 'Bebas Neue', sans-serif;
+  --serif: 'Cormorant Garamond', Georgia, serif;
+  --sans: 'Inter', system-ui, sans-serif;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { background: var(--cream); color: var(--ink); font-family: var(--sans); line-height: 1.6; -webkit-font-smoothing: antialiased; }
+a { color: var(--sand-deep); text-decoration: none; }
+.container { max-width: 1280px; margin: 0 auto; padding: 0 24px; }
+
+.topbar { background: var(--navy-deep); color: var(--cream); padding: 12px 0; font-size: 13px; }
+.topbar-inner { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+.topbar-tag { color: var(--sand); font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; font-size: 11px; }
+
+.hero { padding: 110px 0 80px; background: var(--cream); position: relative; overflow: hidden; }
+.hero::before { content: ''; position: absolute; top: 5%; right: -10%; width: 700px; height: 700px; background: radial-gradient(circle, rgba(199, 169, 129, 0.20), transparent 65%); filter: blur(60px); pointer-events: none; }
+.hero::after { content: ''; position: absolute; bottom: -20%; left: -10%; width: 520px; height: 520px; background: radial-gradient(circle, rgba(74, 123, 166, 0.20), transparent 65%); filter: blur(60px); pointer-events: none; }
+.hero-grid { max-width: 1040px; margin: 0 auto; position: relative; z-index: 2; }
+.eyebrow { font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--sand-deep); font-weight: 700; margin-bottom: 26px; display: block; }
+.hero h1 { font-family: var(--serif); font-weight: 600; font-size: clamp(38px, 5.6vw, 70px); line-height: 1.05; letter-spacing: -0.015em; margin-bottom: 32px; color: var(--navy); }
+.hero h1 em { font-style: italic; color: var(--sand-deep); }
+.hero p { color: var(--ink-soft); font-size: 19px; max-width: 820px; line-height: 1.55; }
+
+.section { padding: 90px 0; position: relative; }
+.section.alt { background: var(--bone); }
+.section-title { font-family: var(--serif); font-weight: 600; font-size: clamp(32px, 4vw, 54px); letter-spacing: -0.015em; line-height: 1.06; margin-bottom: 18px; color: var(--navy); }
+.section-title em { font-style: italic; color: var(--sand-deep); }
+.section-sub { color: var(--ink-soft); font-size: 17px; margin-bottom: 56px; max-width: 800px; line-height: 1.6; }
+
+.compare-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; }
+.compare-card { border: 1px solid var(--line); border-radius: 4px; overflow: hidden; background: var(--white); transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s; }
+.compare-card:hover { border-color: var(--sand-deep); transform: translateY(-4px); box-shadow: 0 20px 56px rgba(42, 74, 99, 0.14); }
+.compare-label { padding: 16px 24px; font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase; font-weight: 700; }
+.compare-label.current { background: rgba(122, 44, 44, 0.08); color: var(--burgundy); border-bottom: 1px solid rgba(122, 44, 44, 0.18); }
+.compare-label.new { background: rgba(199, 169, 129, 0.18); color: var(--sand-deep); border-bottom: 1px solid var(--sand); }
+.compare-preview { aspect-ratio: 16/10; position: relative; overflow: hidden; display: flex; align-items: center; justify-content: center; }
+.compare-preview-content { position: relative; z-index: 2; text-align: center; padding: 32px; }
+.compare-preview-content h3 { font-family: var(--display); font-size: 36px; font-weight: 400; letter-spacing: 1.5px; }
+.compare-preview-content p { font-family: var(--serif); font-size: 16px; font-style: italic; margin-top: 12px; }
+.compare-preview.current-bg { background: linear-gradient(135deg, var(--bone), var(--cream)); }
+.compare-preview.current-bg .compare-preview-content h3 { color: var(--navy); }
+.compare-preview.current-bg .compare-preview-content p { color: var(--ink-soft); }
+.compare-preview.new-bg { background: linear-gradient(135deg, var(--blue), var(--navy) 65%, var(--navy-deep)); }
+.compare-preview.new-bg .compare-preview-content h3 { color: var(--cream); }
+.compare-preview.new-bg .compare-preview-content p { color: rgba(247, 243, 236, 0.88); }
+.compare-body { padding: 28px 32px; }
+.compare-body h4 { font-family: var(--serif); font-size: 26px; font-weight: 600; margin-bottom: 10px; color: var(--navy); }
+.compare-body p { color: var(--ink-soft); font-size: 14px; margin-bottom: 22px; line-height: 1.65; }
+.compare-body ul { list-style: none; margin-bottom: 24px; }
+.compare-body li { padding: 7px 0; font-size: 14px; color: var(--ink-soft); display: flex; align-items: flex-start; gap: 10px; line-height: 1.5; }
+.compare-body li::before { font-size: 12px; margin-top: 3px; flex-shrink: 0; font-weight: 700; }
+.current li::before { content: '\2717'; color: var(--burgundy); }
+.new li::before { content: '\2713'; color: var(--green); }
+.compare-cta { display: inline-flex; align-items: center; gap: 8px; padding: 12px 24px; border-radius: 2px; font-size: 12px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; transition: all 0.25s; }
+.cta-current { border: 2px solid var(--burgundy); color: var(--burgundy); }
+.cta-current:hover { background: var(--burgundy); color: var(--cream); }
+.cta-new { background: var(--navy); color: var(--cream); }
+.cta-new:hover { background: var(--sand-deep); }
+
+.bombshell-section { background: var(--navy); color: var(--cream); }
+.bombshell-grid { display: grid; grid-template-columns: 1fr 1.4fr; gap: 72px; align-items: center; }
+.bombshell-stat { font-family: var(--display); font-size: clamp(120px, 14vw, 220px); font-weight: 400; line-height: 0.88; color: var(--sand); letter-spacing: 2px; }
+.bombshell-stat-label { font-size: 13px; letter-spacing: 0.18em; text-transform: uppercase; color: rgba(247, 243, 236, 0.65); margin-top: 18px; font-weight: 600; line-height: 1.5; }
+.bombshell-content h2 { font-family: var(--serif); font-size: clamp(34px, 4.2vw, 56px); font-weight: 600; line-height: 1.06; margin-bottom: 26px; color: var(--cream); }
+.bombshell-content h2 em { font-style: italic; color: var(--sand); }
+.bombshell-content p { color: rgba(247, 243, 236, 0.86); font-size: 17px; line-height: 1.7; margin-bottom: 16px; }
+.bombshell-content p strong { color: var(--cream); font-weight: 700; }
+.competitor-list { margin-top: 28px; padding: 22px 26px; background: rgba(199, 169, 129, 0.08); border-left: 2px solid var(--sand); border-radius: 2px; }
+.competitor-list-title { font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--sand); font-weight: 700; margin-bottom: 14px; }
+.competitor-row { display: flex; justify-content: space-between; padding: 8px 0; font-size: 14px; color: rgba(247, 243, 236, 0.78); border-bottom: 1px solid rgba(199, 169, 129, 0.10); line-height: 1.4; gap: 16px; }
+.competitor-row:last-child { border-bottom: none; }
+.competitor-row .rank { color: var(--sand); font-weight: 700; flex-shrink: 0; }
+
+.plan-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; margin-top: 40px; }
+.plan-card { padding: 32px; background: var(--white); border: 1px solid var(--line); border-radius: 4px; transition: all 0.3s; position: relative; }
+.plan-card:hover { border-color: var(--sand-deep); transform: translateY(-4px); box-shadow: 0 16px 40px rgba(42, 74, 99, 0.10); }
+.plan-num { font-family: var(--display); font-size: 14px; color: var(--burgundy); font-weight: 400; margin-bottom: 14px; display: block; letter-spacing: 2px; }
+.plan-card h4 { font-family: var(--serif); font-size: 24px; font-weight: 600; line-height: 1.15; margin-bottom: 12px; color: var(--navy); }
+.plan-card p { color: var(--ink-soft); font-size: 14px; line-height: 1.6; }
+.plan-week { font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--sand-deep); font-weight: 700; margin-top: 18px; display: inline-block; }
+
+.scorecard { border: 1px solid var(--line); border-radius: 4px; overflow: hidden; background: var(--white); }
+.scorecard-header { display: grid; grid-template-columns: 2fr 1fr 1fr; padding: 22px 32px; background: var(--bone); border-bottom: 1px solid var(--line); font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase; font-weight: 700; color: var(--navy); }
+.scorecard-row { display: grid; grid-template-columns: 2fr 1fr 1fr; padding: 18px 32px; border-bottom: 1px solid var(--line); align-items: center; }
+.scorecard-row:last-child { border-bottom: none; }
+.scorecard-row:hover { background: var(--cream); }
+.scorecard-label { font-size: 15px; color: var(--navy); }
+.scorecard-cell { font-size: 14px; }
+.scorecard-cell.current { color: var(--burgundy); }
+.scorecard-cell.new { color: var(--green); font-weight: 700; }
+
+.cta-section { padding: 120px 0; text-align: center; background: var(--cream); position: relative; overflow: hidden; }
+.cta-section::before { content: ''; position: absolute; top: -10%; left: 50%; transform: translateX(-50%); width: 900px; height: 600px; background: radial-gradient(circle, rgba(199, 169, 129, 0.14), transparent 65%); filter: blur(70px); pointer-events: none; }
+.cta-section .container { position: relative; z-index: 2; }
+.cta-section h2 { font-family: var(--serif); font-size: clamp(36px, 5vw, 62px); font-weight: 600; letter-spacing: -0.02em; margin-bottom: 26px; line-height: 1.06; color: var(--navy); }
+.cta-section h2 em { font-style: italic; color: var(--sand-deep); }
+.cta-section p { color: var(--ink-soft); font-size: 17px; margin-bottom: 40px; max-width: 680px; margin-left: auto; margin-right: auto; line-height: 1.6; }
+.cta-buttons { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+.cta-button { display: inline-flex; align-items: center; gap: 8px; padding: 18px 36px; border-radius: 2px; font-size: 13px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; transition: all 0.25s; }
+.cta-button.primary { background: var(--navy); color: var(--cream); }
+.cta-button.primary:hover { background: var(--navy-deep); transform: translateY(-2px); }
+.cta-button.ghost { border: 2px solid var(--line); color: var(--navy); background: var(--white); }
+.cta-button.ghost:hover { border-color: var(--sand-deep); color: var(--sand-deep); }
+
+footer { padding: 32px 0; border-top: 1px solid var(--line); text-align: center; font-size: 12px; color: var(--ink-soft); background: var(--bone); }
+footer a { color: var(--sand-deep); }
+.foot-disclaimer { max-width: 840px; margin: 0 auto 16px; font-size: 11px; line-height: 1.6; color: var(--ink-soft); }
+
+@media (max-width: 1024px) {
+  .compare-grid { grid-template-columns: 1fr; }
+  .bombshell-grid { grid-template-columns: 1fr; gap: 32px; }
+  .plan-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 720px) {
+  .plan-grid { grid-template-columns: 1fr; }
+  .scorecard-header, .scorecard-row { grid-template-columns: 1.5fr 1fr 1fr; padding: 14px 18px; }
+}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="container topbar-inner">
+    <span class="topbar-tag">Search Visibility Audit &middot; Prepared by AG1 Consulting</span>
+    <span>For the Bay Dental Associates Partners</span>
+  </div>
+</div>
+
+<section class="hero">
+  <div class="container">
+    <div class="hero-grid">
+      <span class="eyebrow">Prepared for the Bay Dental Associates Partners &middot; AG1 Consulting</span>
+      <h1>34 years on Finger Road. Independent and partner-owned. A team measured in decades. <em>And invisible to AI search.</em></h1>
+      <p>Bay Dental Associates has provided family dentistry to the greater Green Bay area from its Finger Road office since 1992, with roots back to 1972. It stayed independent and partner-owned while corporate chains moved in around it, and it kept a team that stays 20, 30, and 40 years. Every one of those facts is a trust signal AI search engines reward. None of them are in the website's structured data, and the practice is being lost next to the much larger "Dental Associates" group. This document is the audit and the surgical fix list.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <h2 class="section-title">Bay Dental Associates: <em>before vs after</em></h2>
+    <p class="section-sub">Same practice. Same Finger Road address. Same independent, partner-owned family dentistry. Two very different chances of being the dentist a Green Bay family picks when they finally search for one tonight.</p>
+
+    <div class="compare-grid">
+      <div class="compare-card">
+        <div class="compare-label current">Today &middot; Live Site</div>
+        <div class="compare-preview current-bg">
+          <div class="compare-preview-content">
+            <h3>baydentalgb.com</h3>
+            <p>Currently live &middot; Click to view</p>
+          </div>
+        </div>
+        <div class="compare-body current">
+          <h4>What's there now</h4>
+          <p>The live site states the facts in prose. It says "family dentistry for over 25 years," it names Dr. Roznik, Dr. Nockerts, and Dr. Jensen, it mentions team members with decades of tenure. But the prose is all an AI engine has to work with, because the structured-data layer underneath it is not built.</p>
+          <ul>
+            <li>No Person schema for any of the partner-dentists or current dentists</li>
+            <li>No Dentist / MedicalBusiness / LocalBusiness schema with hours, services, and address</li>
+            <li>The long-tenured team, a real trust signal, sits in prose, unmarked and uncaptured</li>
+            <li>No FAQPage schema, the format AI engines lift verbatim into answers</li>
+            <li>No dedicated heritage page defending the 1992 Finger Road and 1972 founding story</li>
+            <li>No identity content distinguishing Bay Dental from the much larger "Dental Associates" group</li>
+            <li>The independent, partner-owned advantage is never positioned against corporate dental chains</li>
+          </ul>
+          <a href="https://baydentalgb.com/" target="_blank" rel="noopener" class="compare-cta cta-current">View Live Site &rarr;</a>
+        </div>
+      </div>
+
+      <div class="compare-card">
+        <div class="compare-label new">Proposed &middot; AEO-Optimized Build</div>
+        <div class="compare-preview new-bg">
+          <div class="compare-preview-content">
+            <h3>The independent-practice build</h3>
+            <p>Click to explore the live demo &rarr;</p>
+          </div>
+        </div>
+        <div class="compare-body new">
+          <h4>What we'd ship</h4>
+          <p>The 34-year Finger Road history, the partner-owned independence, the long-tenured team, and the name-distinction from the big group, all hardened into structured data AI search can actually read. Phase 1 installs in less than 7 days.</p>
+          <ul>
+            <li>Person schema for the practice's dentists and founding-era partners</li>
+            <li>Dentist + MedicalBusiness + LocalBusiness + Organization schema, fully populated</li>
+            <li>The long-tenured team surfaced as a deliberate, schema-supported trust asset</li>
+            <li>FAQPage schema across the questions real patients ask AI engines</li>
+            <li>Dedicated heritage page, schema-marked, defending the 1972-to-1992 Green Bay story</li>
+            <li>Name-distinction identity content so Bay Dental stops being confused with "Dental Associates"</li>
+            <li>Independent-vs-DSO trust positioning surfaced as a deliberate competitive moat</li>
+            <li>Performance gate: cited in 4 of 5 family-dentist AI queries by day 90, or work continues at no additional cost</li>
+          </ul>
+          <a href="../" class="compare-cta cta-new">Open the Demo &rarr;</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section bombshell-section">
+  <div class="container">
+    <div class="bombshell-grid">
+      <div>
+        <div class="bombshell-stat">0/5</div>
+        <div class="bombshell-stat-label">AI search queries that drive new dental patients in Green Bay where Bay Dental Associates currently surfaces.</div>
+      </div>
+      <div class="bombshell-content">
+        <h2>34 years of trust. <em>Zero of it is machine-readable.</em></h2>
+        <p>We tested five buyer queries across ChatGPT, Perplexity, and Google AI Overviews: family dentist Green Bay, dentist near me Green Bay, dentist east Green Bay, independent dentist Green Bay, and best dentist Green Bay WI. Bay Dental Associates surfaced in <strong>0 of 5</strong>.</p>
+        <p>The answers went to the large "Dental Associates" Wisconsin group, to Aspen Dental and Midwest Dental, and to a handful of independents like Oral Health Associates and Wagner Family Dentistry. <strong>A 34-year independent practice with a team measured in decades is being out-cited by corporate chains and by a group it gets confused with.</strong></p>
+        <p>The fix is not a rebuild of the practice. It is the schema, the heritage authority page, the long-tenured-team content, the name-distinction identity work, and the independent-vs-chain positioning. The hard part, the 34 years and the team that stays and the partner ownership, is already done.</p>
+        <div class="competitor-list">
+          <div class="competitor-list-title">Who currently owns Green Bay dental queries in AI search</div>
+          <div class="competitor-row"><span>Dental Associates (large multi-location WI group, separate company)</span><span class="rank">#1</span></div>
+          <div class="competitor-row"><span>Aspen Dental (Ashwaubenon, corporate chain)</span><span class="rank">#2</span></div>
+          <div class="competitor-row"><span>Midwest Dental (Green Bay, group practice)</span><span class="rank">#3</span></div>
+          <div class="competitor-row"><span>Oral Health Associates &amp; Wagner Family Dentistry (independents)</span><span class="rank">#4</span></div>
+          <div class="competitor-row"><span>Bay Dental Associates (independent, Finger Road since 1992)</span><span class="rank">Not surfacing</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section alt">
+  <div class="container">
+    <h2 class="section-title">The <em>90-day</em> plan.</h2>
+    <p class="section-sub">Four phases. The schema and heritage authority page ship in less than 7 days. The long-tenured-team content, the name-distinction identity work, and the FAQ surfaces follow. By day 90, AI search treats Bay Dental Associates as the established, independent practice it has been for three decades.</p>
+
+    <div class="plan-grid">
+      <div class="plan-card">
+        <span class="plan-num">Phase 01</span>
+        <h4>Schema + Heritage</h4>
+        <p>Dentist, MedicalBusiness, LocalBusiness, and Organization schema deployed. Person schema for the practice's dentists and founding-era partners. A dedicated heritage authority page with the 1972 founding and the 1992 Finger Road move. The structured-data backbone.</p>
+        <span class="plan-week">Week 1</span>
+      </div>
+      <div class="plan-card">
+        <span class="plan-num">Phase 02</span>
+        <h4>Team + Identity Pages</h4>
+        <p>The long-tenured team rebuilt as a deep, schema-supported trust surface. A name-distinction identity page so Bay Dental stops being confused with the larger "Dental Associates" group in search.</p>
+        <span class="plan-week">Week 2 to 4</span>
+      </div>
+      <div class="plan-card">
+        <span class="plan-num">Phase 03</span>
+        <h4>AEO Answer Surfaces</h4>
+        <p>FAQPage schema and 40-word answer blocks across the queries patients type into AI: family dentist Green Bay, dentist east Green Bay, independent dentist Green Bay, dentist accepting new patients Green Bay.</p>
+        <span class="plan-week">Weeks 4 to 8</span>
+      </div>
+      <div class="plan-card">
+        <span class="plan-num">Phase 04</span>
+        <h4>Citations + Reviews</h4>
+        <p>Google Business Profile optimization, Healthgrades and WebMD profile enhancement, local directory cleanup to fix the name confusion at the source, and a post-appointment review-velocity flow built for dental-review compliance.</p>
+        <span class="plan-week">Weeks 4 to 12</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <h2 class="section-title">The <em>scorecard.</em></h2>
+    <p class="section-sub">Every signal Google AI search and the searching Green Bay family check, the current baydentalgb.com graded against the 90-day rebuild.</p>
+
+    <div class="scorecard">
+      <div class="scorecard-header">
+        <div>Signal</div>
+        <div>Today</div>
+        <div>After plan</div>
+      </div>
+      <div class="scorecard-row"><div class="scorecard-label">Person schema, partner-dentists and current dentists</div><div class="scorecard-cell current">&times; None</div><div class="scorecard-cell new">&check; Full</div></div>
+      <div class="scorecard-row"><div class="scorecard-label">Dentist / MedicalBusiness / LocalBusiness schema</div><div class="scorecard-cell current">&times; None</div><div class="scorecard-cell new">&check; Full</div></div>
+      <div class="scorecard-row"><div class="scorecard-label">Long-tenured-team trust content</div><div class="scorecard-cell current">&times; Prose only</div><div class="scorecard-cell new">&check; Surfaced + supported</div></div>
+      <div class="scorecard-row"><div class="scorecard-label">"Family dentist Green Bay" AI capture</div><div class="scorecard-cell current">0 of 5</div><div class="scorecard-cell new">4 of 5 target</div></div>
+      <div class="scorecard-row"><div class="scorecard-label">Name-distinction from the big "Dental Associates" group</div><div class="scorecard-cell current">&times; None</div><div class="scorecard-cell new">&check; Live + schema</div></div>
+      <div class="scorecard-row"><div class="scorecard-label">Independent-vs-DSO trust positioning</div><div class="scorecard-cell current">&times; Not surfaced</div><div class="scorecard-cell new">&check; Positioned</div></div>
+      <div class="scorecard-row"><div class="scorecard-label">1992-heritage authority page</div><div class="scorecard-cell current">&times; Missing</div><div class="scorecard-cell new">&check; Live + schema</div></div>
+      <div class="scorecard-row"><div class="scorecard-label">FAQPage schema (the AI search lift)</div><div class="scorecard-cell current">&times; None</div><div class="scorecard-cell new">&check; 6+ questions</div></div>
+      <div class="scorecard-row"><div class="scorecard-label">Google review velocity</div><div class="scorecard-cell current">Low</div><div class="scorecard-cell new">Compliant flow</div></div>
+      <div class="scorecard-row"><div class="scorecard-label">Core Web Vitals / performance gate</div><div class="scorecard-cell current">Unverified</div><div class="scorecard-cell new">&check; Sub-2.5s LCP</div></div>
+      <div class="scorecard-row"><div class="scorecard-label">Design tier</div><div class="scorecard-cell current">B</div><div class="scorecard-cell new">A+</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-section">
+  <div class="container">
+    <h2>The 34 years are yours.<br>The <em>machine-readable version</em> isn't built yet.</h2>
+    <p>Dental Associates and Aspen are not winning on years on Finger Road, on partner ownership, or on a team that stays decades. They are winning on schema, structured data, and citation density. That gap is closeable inside 90 days, and the practice keeps every asset.</p>
+    <div class="cta-buttons">
+      <a href="mailto:info@andreicopy.net" class="cta-button primary">Book the Strategy Call &rarr;</a>
+      <a href="../" class="cta-button ghost">Open the Demo &rarr;</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <p class="foot-disclaimer">This audit and the linked demo are illustrative marketing materials prepared by AG1 Consulting. They are not medical or dental advice and are not affiliated with or endorsed by Bay Dental Associates. All clinical, credential, and historical content requires the practice's review before any production use.</p>
+    <span>AG1 Consulting &middot; Andrei Givero &middot; info@andreicopy.net &middot; <a href="https://andrei170.github.io/ag1/">andrei170.github.io/ag1</a></span>
+  </div>
+</footer>
+
+</body>
+</html>
